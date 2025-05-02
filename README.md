@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 or download them directly
 ```python
-pip install twitchio==2.10.0 howlongtobeatpy
+pip install twitchio==2.10 howlongtobeatpy
 ```
 Notice that TwitchIO 3.0.0 and further versions stoped supporting IRC, so updating it from 2.10 will break bot.
 ## About Issues, Discussions and PR
