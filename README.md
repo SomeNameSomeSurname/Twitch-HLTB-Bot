@@ -24,11 +24,17 @@ or download them directly
 ```python
 pip install twitchio==2.10.0 howlongtobeatpy
 ```
-Notice that TwitchIO 3.0.0 and further versions stop supporting IRC, so updating it from 2.10 will break bot.
-## 
+Notice that TwitchIO 3.0.0 and further versions stoped supporting IRC, so updating it from 2.10 will break bot.
+## About Issues, Discussions and PR
+If you found a bug please report it by creating an issue.
+
+If you whilling to add feature, or have an idea for feature you can open discussion or PR
 ## Special thanks
 To ScrappyCocco for great HLTB API
+
 To PythonistaGuild for library for the twitch API
+
 To Refferency for the idea of the bot
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
