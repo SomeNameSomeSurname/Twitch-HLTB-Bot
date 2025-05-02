@@ -14,7 +14,7 @@ To launch bot download HLTB-bot.py and requirements.txt files. Fill your account
             initial_channels=['CHOOSE_CHANNELS']
         )
 ```
-You can get token from [twitchtokengenerator]](https://twitchtokengenerator.com/) made by [swiftyspiffy](https://github.com/swiftyspiffy/)
+You can get token from [twitchtokengenerator](https://twitchtokengenerator.com/) made by [swiftyspiffy](https://github.com/swiftyspiffy/)
 ## Requirements
 For bot work you will need at least python 3.10 and to install [ScrappyCocoo HowLongToBeat-PythonAPI](https://github.com/ScrappyCocco/HowLongToBeat-PythonAPI) and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO).
 ```python
