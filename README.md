@@ -5,7 +5,7 @@ It uses [ScrappyCocoo HowLongToBeat-PythonAPI](https://github.com/ScrappyCocco/H
 and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO).
 
 ## Usage
-To launch ot download HLTB-bot.py adn requirements files and fill your account or bot account token and channel name that you would like to use
+To launch bot download HLTB-bot.py and requirements.txt files. Fill your account or bot account token and channel name on which you would like to use bot
 ```python
     def __init__(self):
         super().__init__(
@@ -22,4 +22,6 @@ or download them directly
 ```python
 pip install twitchio==2.10.0 howlongtobeatpy
 ```
-Notice that TwitchIO 3.0.0 and further versions stop supporting IRC, so updating it from 2.10 will break bot
+Notice that TwitchIO 3.0.0 and further versions stop supporting IRC, so updating it from 2.10 will break bot.
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
