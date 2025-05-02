@@ -5,6 +5,7 @@ It uses [ScrappyCocoo HowLongToBeat-PythonAPI](https://github.com/ScrappyCocco/H
 and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO).
 
 ## Usage
+### Launching
 To launch bot download HLTB-bot.py and requirements.txt files. Fill your account or bot account token and channel name on which you would like to use bot
 ```python
     def __init__(self):
@@ -15,6 +16,15 @@ To launch bot download HLTB-bot.py and requirements.txt files. Fill your account
         )
 ```
 You can get token from [twitchtokengenerator](https://twitchtokengenerator.com/) made by [swiftyspiffy](https://github.com/swiftyspiffy/)
+### Chat usage
+To get game info type in chat
+```
+!hltb GAME_NAME
+```
+Bot will answer in format
+```
+Game: GAME_NAME (YEAR) | Main Story HH (in decimal format) | Completionist HH (in decimal format) | Link: GAME_LINK
+```
 ## Requirements
 For bot work you will need at least python 3.10 and to install [ScrappyCocoo HowLongToBeat-PythonAPI](https://github.com/ScrappyCocco/HowLongToBeat-PythonAPI) and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO).
 ```python
