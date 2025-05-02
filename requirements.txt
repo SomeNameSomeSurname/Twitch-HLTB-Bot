@@ -1,0 +1,2 @@
+twitchio==2.10.0
+howlongtobeatpy==1.0.18
