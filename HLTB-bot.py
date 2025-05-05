@@ -22,7 +22,7 @@ class HLTBBot(commands.Bot):
 
     #HLTB search command
     @commands.command(name='hltb')
-    async def hltv_command(self, ctx, *, game_name: str):
+    async def hltb_command(self, ctx, *, game_name: str):
         try:
             results = await HowLongToBeat().async_search(game_name)
 
