@@ -39,6 +39,8 @@ or download them directly
 pip install twitchio howlongtobeatpy
 ```
 ## About Issues, Discussions and PR
+TwitchIOv3 IMHO is still raw, so with updates something can be changed which can result in breaking bot.
+
 If you found a bug please report it by creating an [issue](https://github.com/SomeNameSomeSurname/Twitch-HLTB-Bot/issues).
 
 If you whilling to add feature, or have an idea for feature you can open discussion or [PR](https://github.com/SomeNameSomeSurname/Twitch-HLTB-Bot/pulls)
