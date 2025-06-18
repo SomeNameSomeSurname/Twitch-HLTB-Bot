@@ -1,21 +1,25 @@
 # Twitch HLTB Bot
-Ready to use simple Python bot to text HLTB game completion info in chat
+Python bot to text HLTB game completion info in chat
 
 It uses [ScrappyCocoo HowLongToBeat-PythonAPI](https://github.com/ScrappyCocco/HowLongToBeat-PythonAPI) 
-and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO).
+and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO) v3.
 
 ## Usage
-### Launching
-To launch bot download HLTB-bot.py and requirements.txt files. Fill your account or bot account token and channel name on which you would like to use bot
+### Initial setup
+1.) To launch bot download HLTB-bot.py, requirements.txt and Get_IDs.py files. Fill your ClientID and Client Secret in CREDENTAILS.py
+You can get them by registering your app on twitch [here](dev.twitch.com).
+2.) In Get_IDs.py enter your channel name and channel name of your bot. Example:
 ```python
-    def __init__(self):
-        super().__init__(
-            token="YOUR_TOKEN",
-            prefix="!",
-            initial_channels=['CHOOSE_CHANNELS']
-        )
+async def main() -> None:
+    async with twitchio.Client(client_id=CLIENT_ID, client_secret=CLIENT_SECRET) as client:
+        await client.login()
+        user = await client.fetch_users(logins=["YOUR_CHANNEL_NAME", "BOTS_CHANNEL_NAME"])
+        for u in user:
+            print(f"User: {u.name} - ID: {u.id}")
 ```
-You can get token from [twitchtokengenerator](https://twitchtokengenerator.com/) made by [swiftyspiffy](https://github.com/swiftyspiffy/)
+After runnning your ids will be output in console, write them in credentials.
+3.) Comment setup_hook section and run. Visit http://localhost:4343/oauth?scopes=user:read:chat%20user:write:chat%20user:bot , while being logged on twitch with your BOT ACCOUNT. Then visit http://localhost:4343/oauth?scopes=channel:bot while while being logged on twitch with your MAIN ACCOUNT.
+4.) Rerun programm
 ### Chat usage
 To get game info type in chat
 ```
@@ -23,7 +27,7 @@ To get game info type in chat
 ```
 Bot will answer in format
 ```
-Game: GAME_NAME (YEAR) | Main Story HH (in decimal format) | Completionist HH (in decimal format) | Link: GAME_LINK
+Game: GAME_NAME (YEAR) | Main Story HH (in decimal format) h. | Completionist HH (in decimal format) h. | Link: GAME_LINK
 ```
 ## Requirements
 For bot work you will need at least python 3.10 and to install [ScrappyCocoo HowLongToBeat-PythonAPI](https://github.com/ScrappyCocco/HowLongToBeat-PythonAPI) and [PythonistaGuild TiwtichIO](https://github.com/PythonistaGuild/TwitchIO).
@@ -32,9 +36,8 @@ pip install -r requirements.txt
 ```
 or download them directly
 ```python
-pip install twitchio==2.10 howlongtobeatpy
+pip install twitchio howlongtobeatpy
 ```
-Notice that TwitchIO 3.0.0 and further versions stoped supporting IRC, so updating it from 2.10 will break bot.
 ## About Issues, Discussions and PR
 If you found a bug please report it by creating an [issue](https://github.com/SomeNameSomeSurname/Twitch-HLTB-Bot/issues).
 
