@@ -98,7 +98,7 @@ class MyComponent(commands.Component):
     #Ping command check
     @commands.command(aliases=['pingHLTB','pinghltb','PingHLTB','Pinghltb',''])
     async def HLTB_ping(self, ctx):
-        await ctx.send("Пинг ppHop Понг")
+        await ctx.send("Ping ppHop Pong")
 
     #HLTB search command
     @commands.command(aliases=['HLTB'])
@@ -106,16 +106,16 @@ class MyComponent(commands.Component):
         results = await HowLongToBeat().async_search(game_name)
 
         if results is None or len(results) == 0:
-            await ctx.send(f"Игра не найдена")
+            await ctx.send(f"Game not found")
             return
 
         best_match = max(results, key=lambda  x: x.similarity)
 
         message = (
-            f"Игра: {best_match.game_name} ({best_match.release_world}) | "
-            f"Main Story: {best_match.main_story} ч. | "
-            f"Completionist: {best_match.completionist} ч. | "
-            f"Ссылка: {best_match.game_web_link}"
+            f"Game: {best_match.game_name} ({best_match.release_world}) | "
+            f"Main Story: {best_match.main_story} h. | "
+            f"Completionist: {best_match.completionist} h. | "
+            f"URL: {best_match.game_web_link}"
             )
 
         await  ctx.send(message)
